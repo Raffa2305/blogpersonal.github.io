@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog Personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecera">
+        <h1>Mi Blog Personal</h1>
+        <p>Daffareh Carlos| Ingeniería de Software e IA</p>
+    </header>
+
+    <section class="carrusel">
+        <div class="slide activo fondo1">
+            <h2>Bienvenido a mi blog</h2>
+            <p>Aquí cuento lo que aprendo cada semana.</p>
+        </div>
+        <div class="slide fondo2">
+            <h2>Lo que estoy aprendiendo</h2>
+            <p>HTML, CSS y JavaScript paso a paso.</p>
+        </div>
+        <div class="slide fondo3">
+            <h2>Mis proyectos</h2>
+            <p>Formularios, páginas web y mucho más.</p>
+        </div>
+        <button id="anterior" class="flecha izq">&#10094;</button>
+        <button id="siguiente" class="flecha der">&#10095;</button>
+    </section>
+
+    <main class="contenedor">
+        <section class="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Soy Daffareh Carlos Requena y estudio Ingeniería de Software e IA en el CFP Surquillo de SENATI (2do semestre). En este blog comparto lo que aprendo y mis proyectos.</p>
+        </section>
+
+        <h2>Mis entradas <span id="contador">(3)</span></h2>
+        <div id="entradas" class="entradas">
+            <article class="tarjeta">
+                <span class="etiqueta">Estudios</span>
+                <h3>Mi primera semana con JavaScript</h3>
+                <small>03/10/2026</small>
+                <p>Aprendí a usar let y const y a capturar elementos con getElementById. La página ya responde a lo que hago.</p>
+            </article>
+            <article class="tarjeta">
+                <span class="etiqueta">Personal</span>
+                <h3>Mi camino en Ingeniería de Software</h3>
+                <small>05/10/2026</small>
+                <p>Quiero aprender a crear páginas y programas que resuelvan problemas reales.</p>
+            </article>
+            <article class="tarjeta">
+                <span class="etiqueta">Proyectos</span>
+                <h3>Mi formulario de viajes</h3>
+                <small>08/10/2026</small>
+                <p>Hice un formulario que valida los datos y muestra los errores en rojo.</p>
+            </article>
+        </div>
+
+        <section class="nueva-entrada">
+            <h2>Escribir una nueva entrada</h2>
+            <form id="formEntrada" novalidate>
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" placeholder="Título de tu entrada">
+                <span class="error" id="error-titulo"></span>
+
+                <label for="categoria">Categoría</label>
+                <select id="categoria">
+                    <option value="">Por favor seleccione</option>
+                    <option>Estudios</option>
+                    <option>Personal</option>
+                    <option>Proyectos</option>
+                </select>
+                <span class="error" id="error-categoria"></span>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="4" placeholder="Escribe aquí..."></textarea>
+                <span class="error" id="error-mensaje"></span>
+
+                <button type="submit">Publicar entrada</button>
+            </form>
+            <p id="mensajeOk" class="ok">Entrada publicada correctamente.</p>
+        </section>
+    </main>
+
+    <footer class="pie">Carlos Daffareh - SENATI 2026</footer>
+    <script src="app.js"></script>
+</body>
+</html>
